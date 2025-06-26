@@ -8,8 +8,8 @@
 </head>
 <body>
   <div class="container">
-    <h1>📦 Delivery Tracking</h1>
-    <p>Brazil Border ➝ Porto Real do Colégio, AL</p>
+    <h1>📦 Delivery Tracker</h1>
+    <p>From SH Contagem ➝ Porto Real do Colégio</p>
 
     <form id="trackingForm">
       <input type="text" id="trackingID" placeholder="Enter Tracking ID" required />
@@ -17,15 +17,16 @@
     </form>
 
     <div class="tracking-result" id="statusOutput"></div>
+
     <div class="map-container">
       <iframe
         id="map"
-        src="https://www.google.com/maps/d/u/0/embed?mid=1ukiwYQnkFOwGvMtrg9BViQvSzo2TMpk&ehbc=2E312F&noprof=1"
+        src="https://www.google.com/maps/d/u/0/embed?mid=1yEzuQsFBcVAFz_dZVVZftnNnv2JLgH8&ehbc=2E312F"
         width="100%"
-        height="480"
+        height="400"
         style="border:0;"
-        allowfullscreen=""
-        loading="lazy">
+        loading="lazy"
+        allowfullscreen>
       </iframe>
     </div>
   </div>
@@ -38,16 +39,14 @@
     form.addEventListener("submit", function (e) {
       e.preventDefault();
       const code = input.value.trim();
-      const arrival = new Date(Date.now() + 72 * 60 * 60 * 1000);
-      const eta = arrival.toLocaleString();
 
       if (code === "EAD275-66297-09218") {
         output.innerHTML = `
-          <div class="stage">📍 <strong>Status:</strong> Departed SH Contagem / Condomínio Recanto dos Nobres</div>
-          <div class="stage">🚚 En route to <em>Conjunto Santa Maria, 42 Centro, Porto Real do Colégio - AL</em></div>
-          <div class="stage">🕒 Estimated arrival in: <strong>${eta}</strong></div>
-          <div class="stage">📦 Current checkpoint: São Sebastião do Passé</div>
-          <div class="truck-animation">🚚 ➡️ 🏠</div>
+          <div class="stage">📦 <strong>Status:</strong> Just departed SH Contagem / Condomínio Recanto dos Nobres</div>
+          <div class="stage">🚚 In transit via Feira de Santana → São Sebastião do Passé → Maceió</div>
+          <div class="stage">📍 Final destination: Conjunto Santa Maria, 42 Centro, Porto Real do Colégio - AL</div>
+          <div class="stage">🕓 Estimated Arrival: <strong>30th June</strong></div>
+          <div class="truck-animation">🚛 Traveling...</div>
         `;
         output.style.color = "#2ecc71";
       } else {
