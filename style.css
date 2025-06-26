@@ -1,0 +1,77 @@
+body {
+    font-family: 'Segoe UI', sans-serif;
+    background: #f5f6fa;
+    margin: 0;
+    padding: 0;
+  }
+  
+  .container {
+    max-width: 650px;
+    margin: 50px auto;
+    background: white;
+    padding: 30px;
+    border-radius: 12px;
+    box-shadow: 0 10px 25px rgba(0,0,0,0.1);
+    text-align: center;
+  }
+  
+  h1 {
+    color: #2c3e50;
+  }
+  
+  input[type="text"] {
+    padding: 12px;
+    width: 70%;
+    margin: 20px 0;
+    border: 1px solid #ccc;
+    border-radius: 6px;
+    font-size: 16px;
+  }
+  
+  button {
+    padding: 12px 20px;
+    background: #3498db;
+    color: white;
+    border: none;
+    font-size: 16px;
+    border-radius: 6px;
+    cursor: pointer;
+  }
+  
+  button:hover {
+    background: #2980b9;
+  }
+  
+  .tracking-result {
+    margin-top: 20px;
+    font-size: 16px;
+  }
+  
+  .stage {
+    margin-bottom: 10px;
+    animation: fadeIn 1s ease forwards;
+  }
+  
+  .truck-animation {
+    margin-top: 20px;
+    font-size: 28px;
+    animation: drive 2.5s ease-in-out infinite;
+  }
+  
+  @keyframes drive {
+    0%   { transform: translateX(-15px); }
+    50%  { transform: translateX(15px); }
+    100% { transform: translateX(-15px); }
+  }
+  
+  @keyframes fadeIn {
+    from { opacity: 0; }
+    to   { opacity: 1; }
+  }
+  
+  .map-container {
+    margin-top: 30px;
+    border-radius: 10px;
+    overflow: hidden;
+    box-shadow: 0 0 12px rgba(0,0,0,0.15);
+  }
